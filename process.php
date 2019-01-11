@@ -1,4 +1,5 @@
-<?php 
+<?php
+    if(is_numeric($_POST['num01']) && is_numeric($_POST['num02']) ){ 
     if(isset($_POST['submit'])){//to cheak submition of the page
         $result1 = $_POST['num01'];
         $result2 = $_POST['num02'];
@@ -22,8 +23,12 @@
                 
             }
         else{
-            echo "<h1 style='color:red';>Please enter the valid input!!!<h1>";
-            header('Refresh: 2; URL=Q1.php');  
+            echo "<h1 style='color:red';>Please select correct operation !!!<h1>";
+            header('Refresh: 5; URL=Q1.php'); 
             }               
     }
+}else{
+    echo "<h1 style='color:red';>Please enter the correct numeric value to the both text box<h1>";
+            header('Refresh: 5; URL=Q1.php'); 
+   } 
 ?>
